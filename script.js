@@ -2,7 +2,7 @@ let dayBox = document.getElementById("day-box");
 let hrBox = document.getElementById("hr-box");
 let minBox = document.getElementById("min-box");
 let secBox = document.getElementById("sec-box");
-let endDate = new Date(2023, 0, 1, 00, 00);
+let endDate = new Date(2022, 0, 1, 00, 00);
 let endTime = endDate.getTime();
 
 function countdown() {
@@ -19,7 +19,9 @@ if (endTime < todayTime) {
 clearInterval(i);
 document.querySelector(
     ".countdown"
-).innerHTML = `<h1>Countdown Has Expired</h1>`;
+).innerHTML = `<div class="wrapper">
+                    <img src="little-phil.gif" alt="New-Year">
+               </div>`;
 } else {
 let daysLeft = Math.floor(remainingTime / oneDay);
 let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
